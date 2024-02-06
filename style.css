@@ -1,0 +1,264 @@
+*{
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-smoothing: grayscale;
+}
+
+:root{
+    font-size: 65.5%;
+    --headerColor: #b52184;
+    --textColor: #312d64;
+    --buttomText: #ffffff;
+    --footerText: #ffffff;
+    --gradientFirst: #343193;
+    --gradientSecond: #312d64;
+    --moonsBackground: #ffffff;
+    --contactBackground: #f9f4fb;
+}
+
+ html, input, textarea, button{
+    font-family: "Mulish", sans-serif;
+ }
+
+ h1{
+    color: var(--headerColor);
+    font-weight: 900;
+ }
+
+ p{
+    color: var(--textColor);
+ }
+
+ body{
+    font-size: 1.6rem;
+
+    max-width: clamp(43rem, 50vw + 1rem, 100%vw);
+
+    margin: 0 auto;
+ }
+
+ .top{
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+    
+    margin: 0 auto;
+ }
+
+ .astronaut{
+    align-items: center;
+    max-width: clamp(43rem, 50vw + 1rem, 72rem);
+ }
+
+ .top h1{
+    font-size: 3.2rem;
+
+    margin: 1.7rem auto 0 auto;
+    align-items: center;    
+ }
+
+ .top p{
+    font-size: 2rem;
+    font-weight: 600;
+
+    margin: 0 auto;
+    
+    align-items: center;
+ }
+
+ .arrow{
+    background-repeat: no-repeat;
+    margin: 3.5rem auto 9.3rem auto;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+ }
+
+ .mid{
+    background-image: linear-gradient(to bottom right, var(--gradientFirst), var(--gradientSecond));
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 5rem;
+
+    padding: 5.5rem 4rem;
+ }
+
+.moon{
+    width: 35rem;
+    min-height: 33rem;
+    border: none;
+    border-radius: 2rem;
+
+    background: var(--moonsBackground);
+
+    padding: 2.6rem;
+}
+
+.moon h1{
+    margin: 3rem 0 2rem 0;
+
+    font-size: 3rem;
+}
+
+.moon p{
+    max-width: 26.5rem;
+
+    font-weight: 600;
+}
+
+.contact{
+    background: var(--contactBackground);
+    padding: 7.8rem 4rem 6.5rem 4rem;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+
+    gap: 2.4rem;
+}
+
+.contact h1{
+    font-size: 3.2rem;
+    margin-bottom: 4.3rem;
+}
+
+.inputWrapper label{
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+}
+
+.inputWrapper input{
+    background-color: var(--contactBackground);
+
+    border: 1.5px solid var(--gradientSecond);
+    border-radius: 1.6rem;
+
+    width: 35rem;
+
+    padding: 1.6rem 1.6rem 1.6rem 5rem;
+    
+    color: var(--textColor);   
+}
+
+#name{
+    background-image: url(./assets/person.svg);
+    background-repeat: no-repeat;
+
+    background-position: 1.4rem center;
+}
+
+#mail{
+    background-image: url(./assets/at.svg);
+    background-repeat: no-repeat;
+
+    background-position: 1.4rem center;
+}
+
+.inputWrapper input::placeholder{
+    opacity: 0.2;
+    color: var(--textColor);
+}
+
+.inputWrapper textarea{
+    background-color: var(--contactBackground);
+
+    border: 1.5px solid var(--gradientSecond);
+    border-radius: 1.6rem;
+
+    width: 35rem;
+    height: 12.5rem;
+
+    padding: 1.2rem 1.6rem 1.6rem 1.6rem;
+    
+    color: var(--textColor);   
+}
+
+.inputWrapper textarea::placeholder{
+    opacity: 0.2;
+    color: var(--textColor);
+}
+
+button{
+    padding: 1rem 1.6rem;
+
+    border: none;
+    border-radius: 1.6rem;
+
+    width: 15rem;
+
+    color: var(--buttomText);
+
+    background-image: linear-gradient(to bottom right, var(--gradientFirst), var(--gradientSecond));
+}
+
+footer{
+    display: flex;
+
+    padding: 3.2rem 1.6rem;
+    max-width: clamp(43rem, 50vw + 1rem, 100%vw);
+
+    background-image: linear-gradient(to bottom right, var(--gradientFirst), var(--gradientSecond));
+}
+
+footer p{
+    color: var(--footerText);
+
+    margin: auto;
+}
+
+@media (min-width: 1120px) {
+    .top{
+        flex-direction: row-reverse;
+        justify-content: space-between;
+
+        align-items: flex-start;
+
+        margin: 0 3rem 10rem 11rem;
+    }
+
+    .left{
+        margin-top: 31rem;
+    }
+
+    .arrow{
+        margin-top: 18rem;
+        display: block;
+    }
+
+    .mid{
+        flex-direction: row;
+    }
+
+    .contact{
+        align-items: flex-start;
+
+        padding: 9.5rem 10rem;
+        
+        background-image: url(./assets/stars.svg);
+        background-repeat: no-repeat;
+        background-position: bottom right;
+    }
+}
+
